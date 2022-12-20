@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Toggle Menu</title>
   <link rel="stylesheet" href="css/styles.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+
 </head>
 <body>
 
@@ -27,10 +30,15 @@
 
   <main>
     <section class="sec-1">
-      <h1>Welcome!</h1>
-      <div class="sec-1-content">
-        
-      </div>
+      <section class="splide" aria-label="Splide Basic HTML Example">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide"><img src="https://source.unsplash.com/random/?nature/800x400"></li>
+            <li class="splide__slide"><img src="https://source.unsplash.com/random/?animal/800x400"></li>
+            <li class="splide__slide"><img src="https://source.unsplash.com/random/?street/800x400"></li>
+          </ul>
+        </div>
+      </section>
     </section>
   </main>
 
@@ -45,8 +53,21 @@
     </ul>
   </div>
 
+  <script>
+    document.addEventListener( 'DOMContentLoaded', function() {
+      var splide = new Splide( '.splide', {
+        direction: 'ttb',
+        height   : '100%',
+        autoplay : true,
+        rewind   : true,
+      });
+      splide.mount();
+    });
+  </script>
+
   <script src="js/scripts.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 </body>
 </html>
